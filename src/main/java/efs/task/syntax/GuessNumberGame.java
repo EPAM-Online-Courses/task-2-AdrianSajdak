@@ -1,7 +1,5 @@
 package efs.task.syntax;
 
-import java.sql.SQLOutput;
-import java.util.InputMismatchException;
 import java.util.Scanner;
 import java.util.Arrays;
 import java.util.Random;
@@ -70,7 +68,6 @@ public class GuessNumberGame {
                 counter++;
                 continue;
             }
-
             if (attemptInt > secretNumber) {
                 System.out.println(UsefulConstants.TO_MUCH);
             } else if (attemptInt < secretNumber) {
@@ -87,8 +84,8 @@ public class GuessNumberGame {
 
     private void attemptsTab(String[] array) {
         System.out.print("Próby: [");
-        for (int i = 0; i < array.length; i++) {
-            System.out.print(array[i]);
+        for (String s : array) {
+            System.out.print(s);
         }
         System.out.println("]");
     }
